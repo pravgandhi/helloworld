@@ -1,4 +1,4 @@
-<project name="My Project" default="help" basedir=".">
+<project name="My Project" default="help" basedir="." xmlns:sonar="antlib:org.sonar.ant">
   <!-- Ant Demo Project -->
   <!-- Define the properties used by the Ant build -->
   <property name="app.name"      value="helloWorld"/>
