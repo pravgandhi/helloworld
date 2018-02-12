@@ -44,8 +44,8 @@
     </fileset>
   </path>
 
-  <target name="all" depends="clean,compile,dist"
-          description="Clean work dirs, then compile and create a WAR"/>
+  <target name="all" depends="clean,compile,dist,sonar"
+          description="Clean work dirs, then compile and create a WAR, and run sonarqube analysis"/>
 
   <target name="clean"
           description="Delete old work and dist directories">
@@ -82,4 +82,14 @@
          basedir="${work.home}"/>
   </target>
 
+  <!-- Define SonarQube Scanner for Ant Target -->
+ <target name="sonar" depends="compile">
+    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+        <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+        <classpath path="/opt/apache-ant-1.9.7/lib/sonarqube-ant-task-*.jar" />
+    </taskdef>
+ 
+    <!-- Execute SonarQube Scanner for Ant Analysis -->
+    <sonar:sonar />
+</target>
 </project> 
