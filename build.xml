@@ -2,7 +2,7 @@
   <!-- Ant Demo Project -->
   <!-- Define the properties used by the Ant build -->
   <property name="app.name"      value="helloWorld"/>
-  <property name="app.version"   value="1.1-dev"/>
+  <property name="app.version"   value="1.0"/>
   <property name="tcserver.home" value="/opt/apache-tomcat-7.0.70" />
   <property name="work.home"    value="${basedir}/work"/>
   <property name="dist.home"     value="${basedir}/dist"/>
@@ -14,11 +14,11 @@
   
   <!-- Define the SonarQube project properties -->
 <property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
-<property name="sonar.projectName" value="Example of SonarQube Scanner for Ant Usage" />
-<property name="sonar.projectVersion" value="1.0" />
-<property name="sonar.sources" value="src" />
-<property name="sonar.java.binaries" value="build" />
-<property name="sonar.java.libraries" value="lib/*.jar" />
+<property name="sonar.projectName" value="${app.name}" />
+<property name="sonar.projectVersion" value="${app.version}" />
+<property name="sonar.sources" value="${src.home}" />
+<property name="sonar.java.binaries" value="target" />
+<property name="sonar.sourceEncoding" value="UTF-8" />
 
   <target name="help">
     <echo>You can use the following targets:</echo>
