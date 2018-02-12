@@ -8,6 +8,17 @@
   <property name="dist.home"     value="${basedir}/dist"/>
   <property name="src.home"      value="${basedir}/src"/>
   <property name="web.home"      value="${basedir}/web"/>
+  
+  <!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
+<property name="sonar.host.url" value="http://localhost:9000" />
+  
+  <!-- Define the SonarQube project properties -->
+<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
+<property name="sonar.projectName" value="Example of SonarQube Scanner for Ant Usage" />
+<property name="sonar.projectVersion" value="1.0" />
+<property name="sonar.sources" value="src" />
+<property name="sonar.java.binaries" value="build" />
+<property name="sonar.java.libraries" value="lib/*.jar" />
 
   <target name="help">
     <echo>You can use the following targets:</echo>
