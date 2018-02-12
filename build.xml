@@ -17,7 +17,7 @@
 <property name="sonar.projectName" value="${app.name}" />
 <property name="sonar.projectVersion" value="${app.version}" />
 <property name="sonar.sources" value="${src.home}" />
-<property name="sonar.java.binaries" value="target" />
+<property name="sonar.java.binaries" value="${work.home}" />
 <property name="sonar.sourceEncoding" value="UTF-8" />
 
   <target name="help">
