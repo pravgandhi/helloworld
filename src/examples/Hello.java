@@ -1,6 +1,6 @@
 package examples;
 
-import java.io.IOException
+import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * Simple Hello servlet.
  */
 
-public final class Hello extends HttpServlet {
+public final class Hel extends HttpServlet {
 
 
     /**
